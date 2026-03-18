@@ -183,20 +183,17 @@ export function ImportantNotes() {
               <p className="text-lg text-gray-700 mb-6">
                 Daftar sekarang dan dapatkan promo Early Bird!
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="#pricing" 
-                  className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
+              <div className="flex justify-center">
+                <a
+                  href="https://www.surveycake.com/s/r39Ov"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-12 py-5 bg-blue-600 text-white rounded-lg font-bold text-xl hover:bg-blue-700 hover:shadow-xl hover:scale-105 transition-all shadow-lg"
                 >
-                  Lihat Paket & Harga
-                </a>
-                <a 
-                  href="#payment" 
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
-                >
-                  Cara Pembayaran
+                  Daftar Di Sini
                 </a>
               </div>
+
               <p className="text-sm text-gray-600 mt-6">
                 ⚡ Kuota terbatas! Siapa cepat bayar, dapat tempat lebih dulu
               </p>

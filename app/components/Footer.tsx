@@ -82,7 +82,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:04-22215555" className="text-sm hover:text-blue-400 transition-colors">
+                <a href="https://linktr.ee/semangatbmitaiwan" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-blue-400 transition-colors">
                   Hubungi Kami
                 </a>
               </li>
