@@ -8,8 +8,20 @@ echo.
 :: Navigate to project directory
 cd /d "%~dp0"
 
-:: Step 1: Build the project
-echo [1/4] Building the project...
+:: Step 1: Install dependencies
+echo [1/5] Installing dependencies...
+call npm install
+if %errorlevel% neq 0 (
+    echo.
+    echo ERROR: Install failed!
+    pause
+    exit /b 1
+)
+echo       Dependencies updated!
+echo.
+
+:: Step 2: Build the project
+echo [2/5] Building the project...
 call npm run build
 if %errorlevel% neq 0 (
     echo.
@@ -20,14 +32,14 @@ if %errorlevel% neq 0 (
 echo       Build successful!
 echo.
 
-:: Step 2: Stage all changes
-echo [2/4] Staging all changes...
+:: Step 3: Stage all changes
+echo [3/5] Staging all changes...
 git add -A
 echo       All changes staged.
 echo.
 
-:: Step 3: Commit
-echo [3/4] Committing changes...
+:: Step 4: Commit
+echo [4/5] Committing changes...
 set "timestamp=%date% %time%"
 git commit -m "Deploy update - %timestamp%"
 if %errorlevel% neq 0 (
@@ -36,8 +48,8 @@ if %errorlevel% neq 0 (
 )
 echo.
 
-:: Step 4: Push to GitHub
-echo [4/4] Pushing to GitHub...
+:: Step 5: Push to GitHub
+echo [5/5] Pushing to GitHub...
 git push origin main
 if %errorlevel% neq 0 (
     echo.
