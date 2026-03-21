@@ -1,5 +1,4 @@
 node_modules
-dist
 .env
 .DS_Store
 *.local
@@ -8,4 +7,3 @@ yarn-debug.log*
 yarn-error.log*
 .vscode
 .idea
-build
